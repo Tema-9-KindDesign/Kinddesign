@@ -28,27 +28,31 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- CONNECTIONS -->
+   
     <section class="connections">
       <span class="eyebrow">CONNECTIONS</span>
+      <div class="imggidmiddel">
       <img src="public/images/aboutgrid1.webp"
            alt="Creative community gathering">
       <img src="public/images/aboutgrid2.webp"
            alt="Disco ball at an event">
+      <img class="imgnone" src="public/images/aboutgrid3.webp" alt="grid 3">
+      <img class="imgnone" src="public/images/aboutgrid4.webp" alt="grid 4">
+        </div>
       <p class="photo-caption">GOOD VIBES</p>
     </section>
 
-    <!-- EVENTS -->
+  
     <section class="events">
       <span class="eyebrow">CREATIVITY</span>
       <h2>WE'RE HOSTING<br>EVENTS</h2>
       <p>
-        Our events are designed to bring creative
-        people together in ways that feel natural,
-        inspiring and genuinely enjoyable.
+       Our events are designed to bring creative people together in ways that feel natural, inspiring and genuinely enjoyable. From intimate talks and hands-on workshops to casual meetups and shared creative experiences, we create opportunities to learn from each other and explore new perspectives.
       </p>
-      <a href="#" class="event-button">Events</a>
-
+      <div class="pilbutton">
+        <img src="public/images/Skærmbillede 2026-11-17 kl. 17.43.31_result.webp" alt="pil">
+      <a href="../events" class="event-button">Events</a>
+</div>
       <img src="public/images/about2.webp"
            alt="People enjoying a creative event">
 
@@ -64,32 +68,30 @@ import Layout from '../layouts/Layout.astro';
           what they've learned and step
           outside their usual circles.
         </p>
+        <p>We're a mix of people who think in colours, obsess over typography, notice the smallest details and somehow always end up talking about design.</p>
       </div>
     </section>
 
-    <!-- VISION -->
-    <section class="vision">
+   
+<section class="vision">
       <span class="eyebrow">COMMUNITY</span>
       <h2>OUR VISION</h2>
+    <div class="gridvision">
+        <div class="visiontext">
       <p>
-        Our vision is to bring creative people
-        closer together in an industry where
-        so much of our work happens individually.
+       Our vision is to bring creative people closer together. In an industry where so much of our work happens individually, behind screens and within our own creative circles, we want to create more opportunities to meet, connect and grow together.
       </p>
       <p>
-        KIND DESIGN is about building a community
-        where knowledge moves freely, ideas are
-        exchanged openly and everyone has
-        something valuable to contribute.
+       KIND DESIGN is about building a community where knowledge moves freely, ideas are exchanged openly and everyone has something valuable to contribute. 
       </p>
       <p>
-        Through talks, workshops, events and
-        everyday conversations, we aim to make
-        inspiration more accessible.
+     Through talks, workshops, events and everyday conversations, we aim to make inspiration more accessible and meaningful connections easier to find.
       </p>
-      <img src="public/images/about3.webp"
+      </div>
+      <img class="bottomimg" src="public/images/about3.webp"
            alt="Members of KIND DESIGN">
-    </section>
+    </div>
+</section>
  </Layout>
  <style>
     img {
@@ -114,6 +116,7 @@ p {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 16px;
+  font-family: 'p_thin', sans-serif;
 }
 
 .eyebrow {
@@ -122,9 +125,10 @@ p {
   font-size: 10px;
   font-weight: bold;
   margin-bottom: 5px;
+   font-family: 'headline', sans-serif;
 }
 
-/* ABOUT */
+
 
 .hero {
   display: flex;
@@ -142,20 +146,21 @@ p {
   color: var(--pink);
   font-size: 50px
   margin-top: 30px;
-  margin-left: -18px;
+  margin-left: -30px;
   position: relative;
 }
 
 .intro {
   padding: 55px 24px 45px;
   text-align: center;
+  font-weight: 400;
 }
 
 .intro h2 {
   margin-bottom: 28px;
 }
 
-/* CONNECTIONS */
+
 
 .connections {
   background: #c8e9f5;
@@ -177,7 +182,7 @@ p {
   padding: 6px 10px;
 }
 
-/* EVENTS */
+
 
 .events {
   padding-top: 40px;
@@ -190,16 +195,21 @@ p {
   margin-right: 24px;
 }
 
-.event-button {
-  display: block;
-  width: fit-content;
-  margin: 20px auto 30px;
+.event-button  {
+   background-color: var(--pink);
+  color: var(--black);
   padding: 8px 25px;
-  border-radius: 30px;
-  background: #df82c4;
-  color: white;
+  border-radius: 25px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
+
+  width: fit-content;
+  height: fit-content;
+ border-radius: 30px;
+    border: 6px solid var(--silver);
+  justify-self: center;
+  align-self: center;
+	margin-top: 40px;
 }
 
 .events > img {
@@ -215,7 +225,13 @@ p {
   text-align: right;
 }
 
-/* VISION */
+.pilbutton{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img{
+height: 100%;    }
+}
+
 
 .vision {
   padding-top: 55px;
@@ -226,6 +242,7 @@ p {
 .vision p {
   margin-left: 24px;
   margin-right: 24px;
+   
 }
 
 .vision h2 {
@@ -238,5 +255,192 @@ p {
 
 .vision img {
   margin-top: 40px;
+  margin-bottom: 40px;
+}
+.imgnone{
+    display: none;
+}
+@media screen and (min-width: 800px){
+    
+    img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1.05;
+  font-family: 'headline', sans-serif;
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 16px;
+  font-family: 'headline', sans-serif;
+}
+
+p {
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-family: 'p_thin', sans-serif;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--pink);
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
+   font-family: 'headline', sans-serif;
+}
+
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.hero img {
+  width: 55%;
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.hero h1 {
+  color: var(--pink);
+  font-size: 150px;
+    transform: translateX(-60px);
+}
+
+.intro {
+  padding: 55px 24px 45px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.intro h2 {
+  margin-bottom: 28px;
+}
+
+
+
+.connections {
+  background: #c8e9f5;
+  padding-top: 10px;
+}
+
+.connections .eyebrow {
+  padding-left: 8px;
+}
+
+.connections img {
+  max-width: 100%;
+ height: 400px;
+}
+
+.photo-caption {
+  text-align: right;
+  font-size: 20px;
+  margin: 0;
+  padding: 6px 10px;
+}
+
+
+
+.events {
+  padding-top: 40px;
+}
+
+.events > .eyebrow,
+.events > h2,
+.events > p {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.event-button  {
+   background-color: var(--pink);
+  color: var(--black);
+  padding: 15px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 25px;
+text-align: center;
+  width: 150px;
+  height: fit-content;
+ border-radius: 30px;
+    border: 6px solid var(--silver);
+  justify-self: center;
+  align-self: center;
+	margin-top: 100px;
+}
+
+.events > img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.blue-text {
+  background: #c8e9f5;
+  padding: 25px 20px;
+}
+
+.blue-text p:nth-child(2) {
+  text-align: right;
+}
+
+.pilbutton{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img{
+height: 100%;    }
+}
+
+.gridvision{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.vision {
+  padding-top: 55px;
+}
+
+.vision .eyebrow,
+.vision h2,
+.vision p {
+  margin-left: 24px;
+  margin-right: 24px;
+   
+}
+
+.vision h2 {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.vision p {
+  margin-bottom: 20px;
+}
+
+.vision img {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.visiontext{
+    text-align: left;
+    padding-top: 20px;
+}
+.imggidmiddel{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px 10px;
+}
+.imgnone{
+    display: block;
+}
 }
  </style>
