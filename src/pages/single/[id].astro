@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import '../../styles/style.css';
 
 export async function getStaticPaths() {
 const endpoint = "https://zmuyycufsaccnnglqgtk.supabase.co/rest/v1/cards?"
@@ -123,6 +124,10 @@ const day = eventDate.getUTCDate();
     font-size: 20px;
     line-height: 1.1;
     text-transform: uppercase;
+    font-family: 'headline';
+  }
+  .single-info p{
+    font-family: 'p_thin';
   }
 
   .meta {
@@ -136,6 +141,21 @@ const day = eventDate.getUTCDate();
     font-size: 14px;
     line-height: 1.6;
   }
+  .single-info h1 {
+  font-family: "headline", sans-serif;
+  font-weight: 400;
+}
+
+.single-info .meta,
+.single-info .description {
+  font-family: "p", sans-serif;
+  font-weight: 300;
+}
+
+.single-date,
+.back-link {
+  font-family: "p", sans-serif;
+}
     @media (min-width: 768px) {
   .single-image {
     width: 300px;
