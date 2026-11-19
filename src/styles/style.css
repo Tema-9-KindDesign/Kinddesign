@@ -8,16 +8,16 @@
 }
 @font-face {
   font-family: "p";
-  src: url("public/Poppins-Light.woff2");
+  src: url("/Poppins-Light.woff2");
   font-weight: 100;
 }
 @font-face {
   font-family: "headline";
-  src: url("public/Jua-Regular.woff2");
+  src: url("/Jua-Regular.woff2");
   font-weight: 400;
 }
 @font-face {
   font-family: "p_thin";
-  src: url("public/Poppins-Thin.woff2");
+  src: url("/Poppins-Thin.woff2");
   font-weight: 100;
 }
